@@ -3,47 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Excuse Generator</title>
+    <title>Domain Name Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <p id="excuse-example">My mother told me to take care of some papers</p>
-    <button type="button" id="trigger" onclick="createExcuse()">
-      Create Excuse
-    </button>
-
-    <script type="text/javascript">
-      var excuse = document.getElementById("excuse-example");
-      let who = ["The dog", "My grandma", "His turtle", "My bird"];
-      let action = ["ate", "peed", "crushed", "broke"];
-      let what = ["my homework", "the keys", "the car"];
-      let when = [
-        "before the class",
-        "right on time",
-        "when I finished",
-        "during my lunch",
-        "while I was praying"
-      ];
-
-      function loopArray(arr) {
-        return Math.floor(Math.random() * arr.length);
-      }
-
-      function createExcuse() {
-        var newExcuse = `${who[loopArray(who)]} ${action[loopArray(action)]} ${
-          what[loopArray(what)]
-        } ${when[loopArray(when)]}`;
-        excuse.innerHTML = newExcuse;
-      }
-
-      //var trigger = document.getElementById("trigger");
-      // trigger.addEventListener("click", createExcuse);
-    </script>
+    <ul id="domainsList">
+      Click the button to see the available domains
+    </ul>
+    <button id="trigger">Generate Domain</button>
+    <button id="clear">Clear List</button>
   </body>
 </html>
